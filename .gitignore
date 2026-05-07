@@ -1,8 +1,6 @@
 # Simulation outputs
 data/
-figures/
-videos/
-final_plots/
+
 
 # Plans and notes
 plan.md
