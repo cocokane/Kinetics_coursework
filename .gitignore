@@ -1,0 +1,17 @@
+# Simulation outputs
+data/
+figures/
+videos/
+final_plots/
+
+# Plans and notes
+plan.md
+theory.md
+theory_original.md
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
