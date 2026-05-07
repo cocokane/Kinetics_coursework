@@ -1,7 +1,9 @@
 # Spinodal Decomposition from a Phase-Field Perspective
 
 **Term Paper, MTLE-6060 Advanced Kinetics**
+
 **Yash Kokane**
+
 **7 May 2026**
 
 ---
