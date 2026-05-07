@@ -19,7 +19,7 @@ In the Advanced Kinetics course, we discuss Spinodal Decomposition (Lecture 16) 
 ![alt text](image.png)
 (Figure: Slide 6, Lecture 16 \cite{ShiLecture16} - defining the spinodal region on a binary phase diagram)
 Beginning with the regular-solution Gibbs free energy
-$$G = X_A G_A + X_B G_B + \Omega X_A X_B + RT(X_A \ln X_A + X_B \ln X_B), \qquad \Omega = N_a z\left[\varepsilon_{AB} - \tfrac{1}{2}(\varepsilon_{AA} + \varepsilon_{BB})\right]$$
+$$G = X_A G_A + X_B G_B + \Omega X_A X_B + RT(X_A \ln X_A + X_B \ln X_B), \qquad \Omega = N_a z\left[\varepsilon_{AB} - \frac{1}{2}(\varepsilon_{AA} + \varepsilon_{BB})\right]$$
 
 In the figure, we see two stability boundaries: the binodal $X_1$ and $X_2$, defined by the common-tangent construction, and the chemical spinodal $X_1'$ and $X_2'$, defined by $\partial^2 G/\partial c^2 = 0$. Inside the binodal, the system is metastable and decomposes by nucleation and growth; inside the chemical spinodal, the system is unstable to infinitesimal compositional fluctuations and decomposes by uphill diffusion. 
 
@@ -140,7 +140,7 @@ $$u(\mathbf{R}) = \omega\, c(1-c) - \tfrac{1}{2}\,\omega\, \lambda^2\, c\, \nabl
 
 where $\omega$ is the regular-solution interaction parameter,
 
-$$\omega = \sum_n Z_n \nu_n, \qquad \nu_n = \varepsilon_{AB}^{(n)} - \tfrac{1}{2}(\varepsilon_{AA}^{(n)} + \varepsilon_{BB}^{(n)}),$$
+$$\omega = \sum_n Z_n \nu_n, \qquad \nu_n = \varepsilon_{AB}^{(n)} - \frac{1}{2}(\varepsilon_{AA}^{(n)} + \varepsilon_{BB}^{(n)}),$$
 
 with $Z_n$ the coordination number of the $n$-th shell and $\nu_n$ the bond-mismatch energy at shell radius $r_n$. The interaction range $\lambda$ is
 
@@ -224,9 +224,9 @@ $$\frac{\partial c}{\partial t} = M \left[\frac{\partial^2 f_0}{\partial c^2} + 
 
 The first term, when the bracket is negative, gives a *negative* effective diffusivity — Fick's law run in reverse, or "uphill diffusion." This term alone would produce unbounded growth at all wavenumbers. The second term, $\nabla^4 c$, originating from the gradient energy of the 1958 functional, regularizes the dynamics by penalizing short-wavelength modes more aggressively than long-wavelength modes.
 
-A Fourier-mode ansatz $c - c_0 = A(\boldsymbol{\beta}, t)\cos(\boldsymbol{\beta} \cdot \mathbf{r})$ reduces (20) to a linear ODE for the amplitude:
+A Fourier-mode ansatz $c - c_0 = A(\beta, t)\cos(\beta x)$ reduces (20) to a linear ODE for the amplitude:
 
-$$A(\boldsymbol{\beta}, t) = A(\boldsymbol{\beta}, 0)\, \exp[R(\beta) t], \qquad R(\beta) = -M\beta^2 \left[\frac{\partial^2 f_0}{\partial c^2} + \frac{2\eta^2 E}{1-\nu} + 2\kappa\beta^2\right]. \tag{21}$$
+$$A(\beta, t) = A(\beta, 0)\, \exp[R(\beta)\, t], \qquad R(\beta) = -M\beta^2 \left[\frac{\partial^2 f_0}{\partial c^2} + \frac{2\eta^2 E}{1-\nu} + 2\kappa\beta^2\right]. \tag{21}$$
 
 This is the *dispersion relation* — the central result of the kinetic theory. Its features:
 
@@ -279,7 +279,11 @@ The standard adaptation is the Cahn-Hilliard-Cook equation \cite{Cook1970}, whic
 
 $$\frac{\partial c}{\partial t} = M \nabla^2 \left(\frac{\delta F}{\delta c}\right) + \zeta(\mathbf{r}, t),$$
 
-with $\langle \zeta(\mathbf{r}, t)\, \zeta(\mathbf{r}', t')\rangle = -2 M k_B T\, \nabla^2 \delta(\mathbf{r}-\mathbf{r}')\,\delta(t-t')$. With this addition, nucleation events occur in the metastable region with rates broadly consistent with classical nucleation theory.
+where the noise correlator is
+
+$$\langle \zeta(\mathbf{r}, t)\, \zeta(\mathbf{r}', t')\rangle = -2 M k_B T\, \nabla^2 \delta(\mathbf{r}-\mathbf{r}')\,\delta(t-t').$$
+
+With this addition, nucleation events occur in the metastable region with rates broadly consistent with classical nucleation theory.
 
 ### 7.2 Mean-field nature
 
